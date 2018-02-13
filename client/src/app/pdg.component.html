@@ -1,2 +1,17 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<router-outlet></router-outlet>
+<div class="pdg-container">
+	<div class="pdg-header" fxLayout fxLayoutAlign="space-between center">
+		<div class="pdg-logo" fxLayout fxLayoutAlign="center center" fxFlexOffset="20px">
+			<span class="logo"></span>
+			<span class="logo-title">les Publications de grâce</span>
+		</div>
+
+		<div class="header-action" fxLayoutGap="20px">
+			<span>Se connecter</span>
+			<span>Créer un compte</span>
+		</div>
+	</div>
+	<div class="pdg-body">
+		<router-outlet></router-outlet>
+	</div>
+	<div class="pdg-footer"></div>
+</div>

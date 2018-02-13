@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 import { PdgComponent } from './pdg.component';
 import { HomeComponent } from './home/home.component';
 import { PdgRoutingModule }  from './pdg-routing/pdg-routing.module';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -14,9 +14,12 @@ import { PdgRoutingModule }  from './pdg-routing/pdg-routing.module';
   ],
   imports: [
     BrowserModule,
+    FlexLayoutModule,
     PdgRoutingModule
   ],
   providers: [],
-  bootstrap: [PdgComponent]
+  bootstrap: [PdgComponent],
+	schemas: [CUSTOM_ELEMENTS_SCHEMA]
+
 })
 export class PdgModule { }
