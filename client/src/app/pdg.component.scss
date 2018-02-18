@@ -1,3 +1,4 @@
+@import './shared/scss/variables.scss';
 
 $dev_var_border_widht: 0px;
 .pdg-container{
@@ -6,10 +7,10 @@ $dev_var_border_widht: 0px;
     width: 100vw;
 
 	.pdg-header{
-		height: 90px;
+		height: $pdg-header-height; 
 		width: 100%;
-		// background-color: yellow;
-		border: $dev_var_border_widht solid yellow;
+		position: fixed;
+		background-color: green;
 		
 		.logo{
 			width: 30px;
@@ -23,13 +24,12 @@ $dev_var_border_widht: 0px;
 	}
 	.pdg-body {
 		width: 100%;
-		height: calc(100vh - 200px);
-		background-color: red;
-		border: $dev_var_border_widht solid red
+		min-height: calc(100vh - 200px);
+		height: auto;
+		// background-color: red;
 	}
 	.pdg-footer{
 		background-color: black;
-		border: $dev_var_border_widht solid black;
 		height: 110px;
 	}
 }

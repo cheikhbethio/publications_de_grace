@@ -6,22 +6,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 const pdgRoutes: Routes = [
   
-  // {
-  //   path: 'account',
-  //   loadChildren: 'app/admin/admin.module#AdminModule',
-  //   canLoad: [AuthentificationService]
-  // },
+  
+  {
+    path: 'connection',
+    loadChildren: 'app/connection/connection.module#ConnectionModule'
+  },
   {
     path: 'home',
-    // pathMatch: 'full',
+		pathMatch: 'full',
     component: HomeComponent
   },
   {
 		path: '',
 		redirectTo: '/home',
 		pathMatch: 'full',
-	},
-
+	}
   // {
   //   path: '**',
   //   component: PageNotFoundComponent,
@@ -32,7 +31,8 @@ const pdgRoutes: Routes = [
   imports: [
     CommonModule,BrowserModule,
     RouterModule.forRoot(pdgRoutes,{
-      preloadingStrategy: PreloadAllModules
+      preloadingStrategy: PreloadAllModules,
+      // enableTracing: true, // <-- debugging purposes only
     })
   ],
 	exports: [
