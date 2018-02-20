@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { PdgRoutingModule }  from './pdg-routing/pdg-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {ConnectionModule} from './connection/connection.module'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {ConnectionModule} from './connection/connection.module'
   imports: [
     BrowserModule,
     FlexLayoutModule,
+    BrowserAnimationsModule,
     PdgRoutingModule,
     ConnectionModule
   ],

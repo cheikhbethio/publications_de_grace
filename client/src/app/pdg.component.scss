@@ -7,29 +7,30 @@ $dev_var_border_widht: 0px;
     width: 100vw;
 
 	.pdg-header{
-		height: $pdg-header-height; 
+		height: $pdg-header-height;
 		width: 100%;
 		position: fixed;
 		background-color: green;
-		
+
 		.logo{
 			width: 30px;
 			height: 30px;
 			background-color: green
 		}
-		
-		.header-action{
+
+		.header-action {
 			margin-right: 20px;
 		}
 	}
 	.pdg-body {
 		width: 100%;
 		min-height: calc(100vh - 200px);
-		height: auto;
+    height: auto;
+    padding-top: $pdg-header-height;
 		// background-color: red;
 	}
 	.pdg-footer{
 		background-color: black;
-		height: 110px;
+		height: $pdg-footer-height;
 	}
 }
