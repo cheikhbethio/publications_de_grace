@@ -25,7 +25,6 @@ export class SignUpComponent implements OnInit {
   }
 
   matchPassword(formControl: FormControl) {
-    console.log('+++++++++++matchPassword+++++++++++', formControl.value, this.pwdConfirm)
     if (formControl.value !== this.pwdConfirm) {
       return { noMatch: true };
     }
@@ -52,8 +51,6 @@ export class SignUpComponent implements OnInit {
     }
   }
   getPwdErrorMessage() {
-    // console.log('+++++',  this.signupForm.get('password').errors)
-
     const noMatch = this.signupForm.get('password').hasError('noMatch');
     if (noMatch) {
       return 'les deux mot de passe ne sont pas identiques';

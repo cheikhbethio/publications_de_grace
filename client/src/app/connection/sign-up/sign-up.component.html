@@ -14,19 +14,19 @@
 
           <!-- firstname -->
           <mat-form-field>
-            <input matInput placeholder="Votre prenom" formControlName="firstName" required>
+            <input matInput placeholder="Prenom" formControlName="firstName" required>
             <mat-error *ngIf="signupForm.controls.firstName.invalid">{{getErrorMessage('firstName')}}</mat-error>
           </mat-form-field>
 
           <!-- lastname -->
           <mat-form-field>
-            <input matInput placeholder="Votre nom" formControlName="lastName" required>
+            <input matInput placeholder="Nom" formControlName="lastName" required>
             <mat-error *ngIf="signupForm.controls.lastName.invalid">{{getErrorMessage('lastName')}}</mat-error>
           </mat-form-field>
 
           <!-- email -->
           <mat-form-field>
-            <input matInput placeholder="Votre email" formControlName="email" required>
+            <input matInput placeholder="Email" formControlName="email" required>
             <mat-error *ngIf="signupForm.controls.email.invalid">{{getErrorMessage('email')}}</mat-error>
           </mat-form-field>
 
@@ -35,7 +35,7 @@
             <input matInput placeholder="Mot de passe" formControlName="password" required>
             <mat-error *ngIf="signupForm.controls.password.invalid">{{getPwdErrorMessage()}}</mat-error>
           </mat-form-field>
-{{pwdConfirm}}--
+          
           <!-- password confirm -->
           <mat-form-field>
             <input matInput

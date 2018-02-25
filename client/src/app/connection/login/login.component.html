@@ -4,7 +4,7 @@
   <div class="login-form-container connection-form-container" fxLayout="column">
 
     <div class="form-title" fxLayout fxLayoutAlign="center end">
-      <span>Connection</span>
+      <span>Connexion</span>
     </div>
     <form [formGroup]="loginForm"
       novalidate
@@ -15,7 +15,7 @@
 
       <!-- email -->
       <mat-form-field>
-        <input matInput placeholder="Enter your email" formControlName="email" required>
+        <input matInput placeholder="Enter votre email" formControlName="email" required>
         <mat-error *ngIf="loginForm.controls.email.invalid">{{getEmailErrorMessage()}}</mat-error>
       </mat-form-field>
 
@@ -25,8 +25,13 @@
         <mat-error *ngIf="loginForm.controls.password.invalid">{{getPwdErrorMessage()}}</mat-error>
       </mat-form-field>
 
+      <!-- souvenir -->
+      <div class="forgotted-pwd">
+        <a routerLink="../remember-pwd">Mot de passe oublié ?</a>
+      </div>
+
       <!-- <div class="btn-validate"> -->
-        <button mat-button mat-raised-button >Valider</button>
+        <button mat-button mat-raised-button> Valider</button>
       <!-- </div> -->
 
 

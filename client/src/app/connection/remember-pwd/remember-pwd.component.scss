@@ -1,0 +1,35 @@
+
+@import '../../shared/scss/connection.scss';
+
+
+.remember-pwd-container{
+	min-height: calc(100vh - 200px);
+	height: auto;
+  
+	.remember-pwd-message{
+		padding: 10px;
+
+		span{
+			font-size: 20px;
+			text-align: center;
+			color: #163516;
+		}
+
+	}
+ }
+  
+@media (max-width: 450px) {
+	.remember-pwd-form-container {
+	  width: 100%;
+	  min-height: 100%;
+	  height: 450px;
+	}
+  }
+  
+  @media (min-width: 450px + 1) {
+	.remember-pwd-form-container {
+	  width: 450px;
+	  height: 450px;
+	}
+  }
+  
