@@ -9,7 +9,9 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
 export class SignUpComponent implements OnInit {
   signupForm: FormGroup;
   passwordError;
+  password;
   pwdConfirm;
+  passwordMatching = true;
 
   constructor(
     private formBuilder: FormBuilder
@@ -20,16 +22,37 @@ export class SignUpComponent implements OnInit {
       firstName: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(32)]],
       lastName:  ['', [Validators.required, Validators.minLength(2), Validators.maxLength(32)]],
       email:  ['', [Validators.required, Validators.email,]],
-      password: ['', [Validators.required,  Validators.minLength(5), Validators.maxLength(32), this.matchPassword.bind(this)]],
+      password: ['', [Validators.required,  Validators.minLength(5), Validators.maxLength(32)]],
+      pwdConfirm: ['', [Validators.required,  Validators.minLength(5), Validators.maxLength(32)]],
     })
+    this.signupForm.get('password').valueChanges.subscribe(passwordValue => {
+      console.log(passwordValue)
+      this.password = passwordValue;
+      this.checkMatchingPwd();
+    });
+    this.signupForm.get('pwdConfirm').valueChanges.subscribe(pwdConfirmValue => {
+      console.log(pwdConfirmValue)
+      this.pwdConfirm = pwdConfirmValue;
+      this.checkMatchingPwd();
+    });
+
+  }
+  checkMatchingPwd() {
+    this.passwordMatching = this.password === this.pwdConfirm;
+    console.log( this.pwdConfirm, this.password, this.passwordMatching)
   }
 
   matchPassword(formControl: FormControl) {
-    if (formControl.value !== this.pwdConfirm) {
+    console.log(formControl);
+
+    if (this.signupForm &&
+      this.signupForm.get('pwdConfirm').value !==
+      this.signupForm.get('password').value) {
       return { noMatch: true };
     }
     return null;
   }
+
   getErrorMessage(inputName) {
     const required = this.signupForm.get(inputName).hasError('required');
     if (required) {
@@ -50,16 +73,19 @@ export class SignUpComponent implements OnInit {
       return 'Format email incorrect';
     }
   }
-  getPwdErrorMessage() {
-    const noMatch = this.signupForm.get('password').hasError('noMatch');
-    if (noMatch) {
-      return 'les deux mot de passe ne sont pas identiques';
-    }
-    const minLength = this.signupForm.get('password').hasError('minlength');
+  getPwdErrorMessage(input) {
+    // const noMatch = this.signupForm.get(input).hasError('noMatch');
+    // console.log('----*****-----', noMatch, input);
+
+    // if (!this.passwordMatching) {
+    //   return 'les deux mot de passe ne sont pas identiques';
+    // }
+    const minLength = this.signupForm.get(input).hasError('minlength');
     if (minLength) {
       return 'Au moins 5 caractères sont requis';
     }
-    return this.getErrorMessage('password');
+    const toto = this.getErrorMessage(input);
+    return toto;
   }
 
 }

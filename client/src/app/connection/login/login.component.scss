@@ -7,9 +7,13 @@
   .forgotted-pwd{
     width: 100%;
     padding-left: 20%;
-    
+
     a{
       text-decoration: none;
+      color: rgba(0,0,0,.54);
+      &:hover {
+        color: unset;
+      }
     }
   }
 }

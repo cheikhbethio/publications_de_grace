@@ -21,7 +21,8 @@
 
       <!-- password -->
       <mat-form-field>
-        <input matInput placeholder="Mot de passe" formControlName="password" required>
+        <input matInput  type="password"
+          placeholder="Mot de passe" formControlName="password" required>
         <mat-error *ngIf="loginForm.controls.password.invalid">{{getPwdErrorMessage()}}</mat-error>
       </mat-form-field>
 

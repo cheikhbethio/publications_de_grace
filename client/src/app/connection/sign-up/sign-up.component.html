@@ -32,16 +32,19 @@
 
           <!-- password -->
           <mat-form-field>
-            <input matInput placeholder="Mot de passe" formControlName="password" required>
-            <mat-error *ngIf="signupForm.controls.password.invalid">{{getPwdErrorMessage()}}</mat-error>
+            <input matInput
+              type="password"
+              placeholder="Mot de passe" formControlName="password" required>
+            <mat-error *ngIf="signupForm.controls.password.invalid">{{getPwdErrorMessage('password')}}</mat-error>
           </mat-form-field>
-          
+
           <!-- password confirm -->
           <mat-form-field>
             <input matInput
+              type="password"
               placeholder="Confirmation de mot de passe"
-              [ngModelOptions]="{standalone: true}"
-              [(ngModel)] ="pwdConfirm" required/>
+              formControlName ="pwdConfirm" required/>
+              <mat-error>{{getPwdErrorMessage('pwdConfirm')}}</mat-error>
           </mat-form-field>
 
           <button mat-button mat-raised-button >Valider</button>
