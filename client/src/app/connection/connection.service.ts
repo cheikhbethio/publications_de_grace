@@ -5,7 +5,7 @@ import { FormControl } from '@angular/forms';
 export class ConnectionService {
 
   constructor() { }
-  
+
   matchPassword(formControl: FormControl, pwdConfirm) {
     if (formControl.value !== pwdConfirm) {
       return { noMatch: true };
@@ -34,17 +34,18 @@ export class ConnectionService {
       return 'Format email incorrect';
     }
   }
-  getPwdErrorMessage(form) {
-    const noMatch = form.get('password').hasError('noMatch');
-    console.log('++++++++++', noMatch)
+  getPwdErrorMessage(inputName, form) {
+    const noMatch = form.get(inputName).hasError('noMatch');
     if (noMatch) {
+      console.log()
       return 'les deux mot de passe ne sont pas identiques';
     }
-    const minLength = form.get('password').hasError('minlength');
+    const minLength = form.get(inputName).hasError('minlength');
     if (minLength) {
       return 'Au moins 5 caractères sont requis';
     }
-    return this.getErrorMessage('password', form);
+    const toto = this.getErrorMessage(inputName, form);
+    return toto;
   }
 
 }

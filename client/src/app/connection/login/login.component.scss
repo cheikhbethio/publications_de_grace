@@ -2,7 +2,7 @@
 
 .login-container {
   min-height: calc(100vh - 200px);
-  height: auto;;
+  height: auto;
 
   .forgotted-pwd{
     width: 100%;
@@ -12,7 +12,7 @@
       text-decoration: none;
       color: rgba(0,0,0,.54);
       &:hover {
-        color: unset;
+        color: #1a4636;
       }
     }
   }

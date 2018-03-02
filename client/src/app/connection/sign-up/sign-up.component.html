@@ -44,7 +44,7 @@
               type="password"
               placeholder="Confirmation de mot de passe"
               formControlName ="pwdConfirm" required/>
-              <mat-error>{{getPwdErrorMessage('pwdConfirm')}}</mat-error>
+              <mat-error *ngIf="signupForm.controls.pwdConfirm.invalid">{{getPwdErrorMessage('pwdConfirm')}}</mat-error>
           </mat-form-field>
 
           <button mat-button mat-raised-button >Valider</button>

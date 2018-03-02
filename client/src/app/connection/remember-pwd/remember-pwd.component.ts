@@ -8,7 +8,6 @@ import { ConnectionService } from '../connection.service';
   styleUrls: ['./remember-pwd.component.scss']
 })
 export class RememberPwdComponent implements OnInit {
-
   rememberPwdForm: FormGroup;
 
   constructor(
@@ -19,29 +18,45 @@ export class RememberPwdComponent implements OnInit {
   ngOnInit() {
     this.rememberPwdForm = this.formBuilder.group({
       email:  ['', [Validators.required, Validators.email,]],
-      password: ['', [Validators.required,  Validators.minLength(5), Validators.maxLength(32)]],
+      password: ['', [Validators.required,  Validators.minLength(5), Validators.maxLength(32), this.matchPassword.bind(this)]],
       pwdConfirm: ['', [Validators.required,  Validators.minLength(5), Validators.maxLength(32), this.matchPassword.bind(this)]],
     });
   }
 
+  // matchPassword(formControl: FormControl) {
+  //   if(!this.rememberPwdForm){
+  //     return;
+  //   }
+  //   console.log('******', this.rememberPwdForm.get('password').value);
+  //   console.log('******', this.rememberPwdForm.get('pwdConfirm').value);
+  //   if (this.rememberPwdForm.get('password').value !== this.rememberPwdForm.get('pwdConfirm').value) {
+  //     return { noMatch: true };
+  //   }
+  //   return null;
+  // }
+
   matchPassword(formControl: FormControl) {
-    if(!this.rememberPwdForm){
-      return;
-    }
-    console.log('******', this.rememberPwdForm.get('password').value);
-    console.log('******', this.rememberPwdForm.get('pwdConfirm').value);
-    if (this.rememberPwdForm.get('password').value !== this.rememberPwdForm.get('pwdConfirm').value) {
+    console.log(formControl);
+
+    if (this.rememberPwdForm &&
+      this.rememberPwdForm.get('pwdConfirm').value !==
+      this.rememberPwdForm.get('password').value) {
       return { noMatch: true };
+    }
+    if (this.rememberPwdForm && (this.rememberPwdForm.get('password').touched ||
+      this.rememberPwdForm.get('pwdConfirm').touched)) {
+      this.rememberPwdForm.get('password').setErrors(null);
+      this.rememberPwdForm.get('pwdConfirm').setErrors(null);
     }
     return null;
   }
 
-  getErrorMessage(input){
-    return this.connectionServices.getErrorMessage(input, this.rememberPwdForm);
+  getErrorMessage(inputName){
+    return this.connectionServices.getErrorMessage(inputName, this.rememberPwdForm);
   }
-  
-  getPwdErrorMessage(){
-    return this.connectionServices.getPwdErrorMessage(this.rememberPwdForm);
+
+  getPwdErrorMessage(inputName){
+    return this.connectionServices.getPwdErrorMessage(inputName,this.rememberPwdForm);
   }
 
 }

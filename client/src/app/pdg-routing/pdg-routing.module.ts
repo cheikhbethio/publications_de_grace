@@ -5,11 +5,13 @@ import {HomeComponent} from '../home/home.component';
 import { BrowserModule } from '@angular/platform-browser';
 
 const pdgRoutes: Routes = [
-  
-  
   {
     path: 'connection',
     loadChildren: 'app/connection/connection.module#ConnectionModule'
+  },
+  {
+    path: 'rubric',
+    loadChildren: 'app/rubric/rubric.module#RubricModule'
   },
   {
     path: 'home',
@@ -20,10 +22,11 @@ const pdgRoutes: Routes = [
 		path: '',
 		redirectTo: '/home',
 		pathMatch: 'full',
-	}
+	},
   // {
   //   path: '**',
-  //   component: PageNotFoundComponent,
+	// 	redirectTo: '/home',
+	// 	pathMatch: 'full'
   // }
 ];
 

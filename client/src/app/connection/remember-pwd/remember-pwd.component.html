@@ -2,7 +2,7 @@
 <div class="remember-pwd-container" fxLayout fxLayoutAlign="center center" fxFlex="100%">
 
     <div class="remember-pwd-form-container connection-form-container" fxLayout="column">
-  
+
       <div class="form-title" fxLayout fxLayoutAlign="center end">
         <span>Mot de passe oublié</span>
       </div>
@@ -27,7 +27,7 @@
       <mat-form-field>
         <input matInput placeholder="Mot de passe" formControlName="password" required>
         <mat-error *ngIf="rememberPwdForm.controls.password.invalid">
-          {{getPwdErrorMessage()}}
+          {{getPwdErrorMessage('password')}}
         </mat-error>
       </mat-form-field>
 
@@ -36,6 +36,7 @@
         <input matInput
           placeholder="Confirmation de mot de passe"
           formControlName="pwdConfirm" required/>
+          <mat-error *ngIf="rememberPwdForm.controls.pwdConfirm.invalid">{{getPwdErrorMessage('pwdConfirm')}}</mat-error>
       </mat-form-field>
 
       <button mat-button mat-raised-button >Valider</button>
@@ -52,7 +53,6 @@
           Un lien vient de vous être envoyé. Merci de consulter votre boite de messagerie.
         </span>
       </div>
-  
+
     </div>
 </div>
-      
