@@ -8,7 +8,14 @@ import { MatIconRegistry} from '@angular/material'
 })
 export class PoemesListComponent implements OnInit {
   searchCritaria;
-
+  poeme = {
+    title: 'La Miséricorde',
+    author: 'Mamadou Ndiaye',
+    nbComment: 32,
+    date: '17/01/2010',
+    imgSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU35QC_wO__VOznw-lzmSvYq9is9_yOq9pQfCB1IiISbvn-xb_'
+  };
+  
   constructor(
     private  matIconRegistry:  MatIconRegistry,
   ) { }
@@ -17,4 +24,7 @@ export class PoemesListComponent implements OnInit {
     this.matIconRegistry.registerFontClassAlias('fontawesome', 'fa');
   }
 
+  toto(){
+    console.log('++++++++')
+  }
 }

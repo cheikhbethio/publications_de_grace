@@ -1,0 +1,27 @@
+
+<div class="poeme-card-wrapper">
+    <div class="poeme-card" fxLayout="column" fxFlex="100%">
+      <div class="poeme-card-image" fxLayout  fxFlex="40%">
+        <img src="{{poeme.imgSrc}}" alt="bethio"  fxLayout fxFlexFill>
+      </div>
+      <div class="poeme-card-info" fxLayout="column"  fxFlex="auto">
+        <div class="title" fxLayout fxLayoutAlign="center center" >
+          <span>{{poeme.title}}</span>
+        </div>
+        <div class="author" fxLayout="column" fxLayoutAlign="center center" >
+          <span class="by">Par</span>
+          <span class="author-name">{{poeme.author}}</span>
+        </div>
+        <div class="link" fxLayout fxFlex="auto" fxLayoutAlign="space-between center">
+          <div class="date" fxFlex="50%" fxLayout fxLayoutAlign="center center">
+              <mat-icon fontSet="fa" class="fa-calendar"></mat-icon>
+              <span>{{poeme.date}}</span>
+          </div>
+          <div class="comment" fxFlex="50%" fxLayout fxLayoutAlign="center center">
+              <mat-icon fontSet="fa" class="fa-comments-o"></mat-icon>
+              <span>{{poeme.nbComment}} commentaires</span>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

@@ -6,6 +6,7 @@ import { PoemesListComponent } from './poemes-list/poemes-list.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule, MatFormFieldModule, MatInputModule, MatIconModule, MatIconRegistry } from '@angular/material';
 import { FormsModule } from '@angular/forms';
+import { PoemeCardComponent } from '../shared/composants/poeme-card/poeme-card.component'
 
 const matModules = [
   MatButtonModule,
@@ -23,6 +24,9 @@ const matModules = [
     ...matModules
   ],
   providers: [MatIconRegistry],
-  declarations: [PoemesListComponent]
+  declarations: [
+    PoemesListComponent,
+    PoemeCardComponent
+  ]
 })
 export class RubricModule { }

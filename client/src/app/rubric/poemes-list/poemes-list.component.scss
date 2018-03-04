@@ -73,7 +73,11 @@ $search-container-height: 75px;
                             }
                         }
                         .link {
-                            border: 0.5px solid $body-background-c;
+                            div{
+                                height: 46px;
+                                border-top: 0.5px solid $body-background-c;
+
+                            }
                         }
                     }
                 }

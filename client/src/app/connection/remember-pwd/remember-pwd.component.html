@@ -15,31 +15,31 @@
         fxLayoutGap="20px"
         fxFlex>
 
-      <!-- email -->
-      <mat-form-field>
-        <input matInput placeholder="Email" formControlName="email" required>
-        <mat-error *ngIf="rememberPwdForm.controls.email.invalid">
-          {{getErrorMessage('email')}}
-        </mat-error>
-      </mat-form-field>
+        <!-- email -->
+        <mat-form-field>
+          <input matInput placeholder="Email" formControlName="email" required>
+          <mat-error *ngIf="rememberPwdForm.controls.email.invalid">
+            {{getErrorMessage('email')}}
+          </mat-error>
+        </mat-form-field>
 
-      <!-- password -->
-      <mat-form-field>
-        <input matInput placeholder="Mot de passe" formControlName="password" required>
-        <mat-error *ngIf="rememberPwdForm.controls.password.invalid">
-          {{getPwdErrorMessage('password')}}
-        </mat-error>
-      </mat-form-field>
+        <!-- password -->
+        <mat-form-field>
+          <input matInput placeholder="Mot de passe" formControlName="password" required>
+          <mat-error *ngIf="rememberPwdForm.controls.password.invalid">
+            {{getPwdErrorMessage('password')}}
+          </mat-error>
+        </mat-form-field>
 
-      <!-- password confirm -->
-      <mat-form-field>
-        <input matInput
-          placeholder="Confirmation de mot de passe"
-          formControlName="pwdConfirm" required/>
-          <mat-error *ngIf="rememberPwdForm.controls.pwdConfirm.invalid">{{getPwdErrorMessage('pwdConfirm')}}</mat-error>
-      </mat-form-field>
+        <!-- password confirm -->
+        <mat-form-field>
+          <input matInput
+            placeholder="Confirmation de mot de passe"
+            formControlName="pwdConfirm" required/>
+            <mat-error *ngIf="rememberPwdForm.controls.pwdConfirm.invalid">{{getPwdErrorMessage('pwdConfirm')}}</mat-error>
+        </mat-form-field>
 
-      <button mat-button mat-raised-button >Valider</button>
+        <button mat-button mat-raised-button >Valider</button>
 
     </form>
 
