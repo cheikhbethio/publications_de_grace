@@ -1,4 +1,6 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '../src/app/shared/scss/materalByPass.scss';
+
 body{
   background-color: #e5eaeefd;
 }
@@ -7,6 +9,10 @@ body{
 }
 p{
 	margin: 0px;
+}
+
+.myClass mat-dialog-container {
+  padding: 0px;
 }
 
  /* connections views */
