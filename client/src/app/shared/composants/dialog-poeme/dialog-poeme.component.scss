@@ -34,9 +34,45 @@
       }
     }
     .comments-container{
-      height: 200px;
+      min-height: 100px;
+      height: auto;
       width: 100%;
       background-color: #F6F7F9;
       border-top: 1px solid $_gray;
+
+      .comments-panel{
+        width: 80%;
+        height: auto;
+        .statistics{
+          height: 30px;
+          border-bottom: 1px solid $_gray;
+          font-size: 12px;
+          color: #365899;
+          cursor: pointer;
+        }
+        .current-comment{
+          textarea{
+            border-radius: 5px;
+            border: 1px solid $h1-but-color;
+            outline: none;
+            &:focus{
+              outline: none;
+            }
+          }
+        }
+        .comment{
+          font-size: 15px;
+          padding: 10px;
+          .user-picture {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: gray;
+          }
+        }
+        .comments-list{
+          font-size: 15px;
+        }
+      }
     }
 }
