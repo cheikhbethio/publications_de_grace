@@ -11,7 +11,12 @@ $dev_var_border_widht: 0px;
 		width: 100%;
 		position: fixed;
     background-color: green;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.74);
+		box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.74);
+		
+		span.logo-title {
+			color: white;
+			font-size: 30px;
+		}
 
 		.logo{
 			width: 30px;
@@ -21,6 +26,15 @@ $dev_var_border_widht: 0px;
 
 		.header-action {
 			margin-right: 20px;
+			
+			a {
+				text-decoration: none;
+				color: white;
+				font-size: 20px;
+			}
+			a:hover{
+				color: #1045e9;
+			}
 		}
 	}
 	.pdg-body {

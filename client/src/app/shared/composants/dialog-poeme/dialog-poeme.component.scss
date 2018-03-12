@@ -28,9 +28,9 @@
     .poeme-action{
       border-top: 1px solid $_gray;
       font-size: 15px;
-      color: $_gray;
+      color: $h1-but-color;
       div:hover{
-        color: black;
+        color: green;
       }
     }
     .comments-container{
