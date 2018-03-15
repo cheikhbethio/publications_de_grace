@@ -49,3 +49,12 @@ $dev_var_border_widht: 0px;
 		height: $pdg-footer-height;
 	}
 }
+
+@media (max-width: 900px){
+	.pdg-logo{
+		justify-content: flex-center;
+	}
+	.header-action{
+		display: none;
+	}
+}
