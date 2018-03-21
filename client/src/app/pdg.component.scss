@@ -1,22 +1,31 @@
 @import './shared/scss/variables.scss';
+@import './shared/scss/layout.scss';
 
 $dev_var_border_widht: 0px;
 .pdg-container{
     height: auto;
     min-height: 100vh;
     width: 100vw;
+    // padding-top: $pdg-header-height;
 
 	.pdg-header{
 		height: $pdg-header-height;
 		width: 100%;
 		position: fixed;
+    top: 0px;
     background-color: green;
 		box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.74);
-		
+
 		span.logo-title {
 			color: white;
-			font-size: 30px;
-		}
+			font-size: 20px;
+    }
+
+    .hamburger {
+      color: white;
+      font-size: 30px;
+      padding-right: 10px;
+    }
 
 		.logo{
 			width: 30px;
@@ -26,11 +35,16 @@ $dev_var_border_widht: 0px;
 
 		.header-action {
 			margin-right: 20px;
-			
+
 			a {
 				text-decoration: none;
 				color: white;
-				font-size: 20px;
+        font-size: 15px;
+        // display: flex;
+        @extend ._layout-flex-row-center-center;
+        mat-icon{
+          font-size: 20px;
+        }
 			}
 			a:hover{
 				color: #1045e9;
@@ -39,22 +53,26 @@ $dev_var_border_widht: 0px;
 	}
 	.pdg-body {
 		width: 100%;
-		min-height: calc(100vh - 200px);
-    height: auto;
+		// min-height: calc(100vh - 200px);
+    // height: auto;
     padding-top: $pdg-header-height;
 		// background-color: red;
 	}
 	.pdg-footer{
 		background-color: black;
-		height: $pdg-footer-height;
+    height: $pdg-footer-height;
+    width: 100%;
 	}
 }
 
-@media (max-width: 900px){
-	.pdg-logo{
-		justify-content: flex-center;
-	}
-	.header-action{
-		display: none;
-	}
+@media (max-width: 600px){
+  .pdg-container .pdg-header span.logo-title {
+    font-size: 20px;
+  }
+	// .pdg-logo{
+	// 	justify-content: flex-center;
+	// }
+	// .header-action{
+	// 	display: none;
+	// }
 }

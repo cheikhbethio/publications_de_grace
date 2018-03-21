@@ -10,6 +10,10 @@ const pdgRoutes: Routes = [
     loadChildren: 'app/connection/connection.module#ConnectionModule'
   },
   {
+    path: 'account',
+    loadChildren: 'app/account/account.module#AccountModule'
+  },
+  {
     path: 'rubric',
     loadChildren: 'app/rubric/rubric.module#RubricModule'
   },

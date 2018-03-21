@@ -1,0 +1,63 @@
+@import '../../shared/scss/variables.scss';
+@import '../../shared/scss/layout.scss';
+.account-container {
+    height: auto;
+    min-height: calc(100vh - 160px);
+    width: 100vw;
+    .account-card {
+        height: auto;
+        min-height: 300px;
+        width: 410px;
+        .account-card-header {
+            width: 100%;
+            height: auto;
+            padding: 15px;
+            background-color: white;
+            span {
+                font-size: 20px;
+                line-height: 28px;
+                margin-left: 10px;
+            }
+            img {
+                width: 70px;
+                height: 70px;
+                border-radius: 10px;
+            }
+        }
+        .account-chapters{
+          width: 100%;
+
+          .account-chapter-card{
+            // width: 200px;
+            height: 120px;
+            margin-top: 10px;
+            background-color: #49830d;
+            span {
+              color: #FFFFFF;
+              font-size: 20px;
+              font-weight: 500;
+              line-height: 18px;
+            }
+            .icon{
+              width: 80%;
+              height: 50%;
+              color: white;
+              font-size: 50px
+            }
+            mat-icon {
+              width: auto;
+              height: auto;
+          }
+          }
+          // .user-chapter{
+          //   background-color: #056484;
+          // }
+          // .profil-chapter{
+          //   background-color: #2B537E;
+          // }
+          // .favorite-chapter{
+          //   background-color: #027DA7;
+          // }
+        }
+    }
+}
