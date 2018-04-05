@@ -8,11 +8,8 @@ import { PdgRoutingModule }  from './pdg-routing/pdg-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {ConnectionModule} from './connection/connection.module'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatIconModule, MatIconRegistry } from '@angular/material';
-
-const matModules = [
-  MatIconModule
-];
+// import { MatIconModule, MatIconRegistry } from '@angular/material';
+import { OwnMatMaduleModule } from './own-mat-madule/own-mat-madule.module';
 
 @NgModule({
   declarations: [
@@ -25,9 +22,10 @@ const matModules = [
     BrowserAnimationsModule,
     PdgRoutingModule,
     ConnectionModule,
-    ...matModules
+    OwnMatMaduleModule
+    // ...matModules
   ],
-  providers: [MatIconRegistry],
+  providers: [],
   bootstrap: [PdgComponent],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA]
 

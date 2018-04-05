@@ -1,25 +1,23 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AccountRoutingModule } from './account-routing.module';
 import { AccountHomeComponent } from './account-home/account-home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatButtonModule, MatFormFieldModule, MatInputModule, MatIconModule } from '@angular/material';
+import { OwnMatMaduleModule } from '../own-mat-madule/own-mat-madule.module';
 
 
-const matModules = [
-  MatButtonModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatIconModule
-];
 @NgModule({
   imports: [
     CommonModule,
     FlexLayoutModule,
     AccountRoutingModule,
-    ...matModules
+    OwnMatMaduleModule
   ],
-  declarations: [AccountHomeComponent]
+  declarations: [
+    AccountHomeComponent,
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+
 })
 export class AccountModule { }

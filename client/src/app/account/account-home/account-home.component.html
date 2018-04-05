@@ -6,18 +6,23 @@
     </div>
 
     <div class="account-chapters" fxLayout="row wrap" fxLayoutAlign="space-around center" fxFlex="1 0 100%">
-      <div class="account-chapter-card user-chapter" fxLayout="column" fxFlex="200px" fxFlex.xs="170px" fxLayoutAlign="center center" >
+
+      <div class="account-chapter-card user-chapter"
+        (click)="goTo('/account/users')"
+        fxLayout="column" fxFlex="200px" fxFlex.xs="170px" fxLayoutAlign="center center" >
         <div class="icon" fxLayout fxLayoutAlign="center center">
           <mat-icon fontSet="fa" class="fa-users"></mat-icon>
         </div>
         <span>Utilisateurs</span>
       </div>
+
       <div class="account-chapter-card profil-chapter" fxLayout="column" fxFlex="200px" fxFlex.xs="170px" fxLayoutAlign="center center">
           <div class="icon" fxLayout fxLayoutAlign="center center">
             <mat-icon fontSet="fa" class="fa-cogs"></mat-icon>
           </div>
           <span>Mon profile</span>
       </div>
+
       <div class="account-chapter-card favorite-chapter" fxLayout="column" fxFlex="200px" fxFlex.xs="170px" fxLayoutAlign="center center">
           <div class="icon" fxLayout fxLayoutAlign="center center">
             <mat-icon fontSet="fa" class="fa-heart"></mat-icon>

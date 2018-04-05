@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-
-@Component({
+import { Router } from '@angular/router';@Component({
+  moduleId: module.id,
   selector: 'pdg-account-home',
-  templateUrl: './account-home.component.html',
-  styleUrls: ['./account-home.component.scss']
+  templateUrl: 'account-home.component.html',
+  styleUrls: ['account-home.component.scss']
 })
 export class AccountHomeComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+  }
+  goTo(url) {
+    this.router.navigateByUrl(url);
   }
 
 }
