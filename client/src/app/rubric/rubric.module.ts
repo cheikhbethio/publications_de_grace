@@ -8,14 +8,7 @@ import { MatButtonModule, MatFormFieldModule, MatInputModule, MatIconModule, Mat
 import { FormsModule } from '@angular/forms';
 import { PoemeCardComponent } from '../shared/composants/poeme-card/poeme-card.component'
 import { DialogPoemeComponent } from '../shared/composants/dialog-poeme/dialog-poeme.component';
-
-const matModules = [
-  MatButtonModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatIconModule,
-  MatDialogModule
-];
+import { OwnMatMaduleModule } from '../own-mat-madule/own-mat-madule.module';
 
 @NgModule({
   imports: [
@@ -23,7 +16,7 @@ const matModules = [
     RubricRoutingModule,
     FlexLayoutModule,
     FormsModule,
-    ...matModules
+    OwnMatMaduleModule
   ],
   providers: [MatIconRegistry],
   entryComponents:[DialogPoemeComponent],

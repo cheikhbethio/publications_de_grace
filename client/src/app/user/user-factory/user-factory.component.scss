@@ -1,0 +1,77 @@
+@import '../../shared/scss/layout.scss';
+@import '../../shared/scss/variables.scss';
+
+.user-container{
+	width: 100vw;
+	height: 500px;
+	background-color: white;
+	min-height: calc(100vh - 160px);
+	padding: 20px;
+	
+	.picture-action-container {
+		width: 200px;
+		height: auto;
+		.picture-panel {
+			height: 230px;
+			width: 100%;
+			border: 1px solid #CCCCCC;
+			background-color: #FFFFFF;
+			.load-btn{
+				width: 100px;
+				height: 50px;
+				border: 1px solid $h1-but-color;
+			}
+		}
+	}
+
+	.infos{
+		// min-height: 150px;
+		height: auto;
+		width: auto;
+		padding-left: 20px;
+		font-size: 20px;
+
+		.info-group{
+			@extend ._layout-flex-row-start-center;
+			height: 50px;
+			width: 50%;
+			min-width: 300px;
+			// background-color: #d9d7d7;
+			label {
+				color: #6A7A8A;
+				font-weight: bold;
+				// width: 200px;
+				width: auto;
+				padding-right: 20px;
+			}
+			.row-info{
+				color: $h1-but-color;
+			}
+		}
+	}
+	.actions{
+		min-height: 50px;
+		width: 100%;
+		height: auto;
+		padding-bottom: 20px;
+		// border: 1px solid #CCCCCC;
+		// padding-left: 20px;
+		// font-size: 20px;
+		button.mat-button{
+			font-size: 20px;
+			color: white;
+			margin-top: 10px;
+			height: 50px;
+			font-weight: bold;
+		}
+		.btn-danger{
+			background-color: red;
+		}
+		.btn-success {
+			background-color: green;
+		}
+		.btn-default{
+			background-color: gray;
+		}
+	}
+}

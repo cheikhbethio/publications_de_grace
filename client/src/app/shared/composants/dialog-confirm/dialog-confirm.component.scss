@@ -1,0 +1,23 @@
+@import '../../scss/layout.scss';
+.mat-dialog-title {
+    @extend ._layout-flex-row-center-center;
+    margin: 0;
+    background-color: green;
+    height: 50px;
+    font-weight: bold;
+    color: white;
+}
+.mat-dialog-content{
+    @extend ._layout-flex-row-center-center;
+    font-size: 20px;    
+}
+
+.mat-dialog-actions {
+    border-top: 1px solid;
+    @extend ._layout-flex-row-center-center;
+    
+    .mat-button+.mat-button{
+        // background-color: red;
+        color: white;
+    }   
+}

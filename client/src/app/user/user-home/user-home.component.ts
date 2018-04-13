@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {MatPaginator, MatTableDataSource} from '@angular/material';
+import {MatPaginator, MatTableDataSource, MatDialog} from '@angular/material';
+import { Router, ActivatedRoute } from '@angular/router';
+import { DialogConfirmComponent } from '../../shared/composants/dialog-confirm/dialog-confirm.component';
 
 @Component({
   moduleId: module.id,
@@ -10,10 +12,19 @@ import {MatPaginator, MatTableDataSource} from '@angular/material';
 export class UserHomeComponent implements OnInit {
   displayedColumns = ['title', 'author', 'date', 'action'];
   dataSource = new MatTableDataSource<any>(ELEMENT_DATA);
+  dataDialog = {
+    title: 'Suppression',
+    text: 'Voulez-vous vraiment supprimer cet utilisateur?',
+    color: 'red'
+  }
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private dialog: MatDialog
+  ) { }
 
   ngOnInit() {
   }
@@ -21,6 +32,23 @@ export class UserHomeComponent implements OnInit {
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
+  editUser(userId){
+    this.router.navigate(['./factory', '123'], {relativeTo: this.route});
+  }
+  openDialog(userId){
+    console.log('+++++open dialog+++',userId, this.dataDialog)
+    let dialogRef = this.dialog.open(DialogConfirmComponent, {
+      panelClass: 'toto',
+      width: '600px',
+      height: '211px',
+      data: this.dataDialog
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed', result);
+    });
+  }
+
 
 }
 const ELEMENT_DATA = [

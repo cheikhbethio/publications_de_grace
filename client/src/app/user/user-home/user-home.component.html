@@ -28,8 +28,10 @@
         <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
         <mat-cell *matCellDef="let element">
           <div class="icon-containter" fxLayout fxLayoutAlign="start center">
-            <mat-icon fontSet="fa" class="fa-edit" fxLayout fxLayoutAlign="center center" matTooltip="Modifier les infos de l'utilisateur"></mat-icon>
-            <mat-icon fontSet="fa" class="fa-trash" fxLayout fxLayoutAlign="center center" matTooltip="Supprimer l'utilisateur"></mat-icon>
+            <mat-icon fontSet="fa" class="fa-eye" fxLayout fxLayoutAlign="center center" matTooltip="Modifier les infos de l'utilisateur"
+            (click)="editUser(element.id)"></mat-icon>
+            <mat-icon fontSet="fa" class="fa-trash" fxLayout fxLayoutAlign="center center" matTooltip="Supprimer l'utilisateur"
+            (click)="openDialog(element.id)"></mat-icon>
           </div>
         </mat-cell>
       </ng-container>

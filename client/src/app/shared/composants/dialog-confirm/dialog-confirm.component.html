@@ -1,0 +1,10 @@
+<h1 mat-dialog-title [ngStyle]="{'background-color': data.color}" >{{data.title}}</h1>
+<div mat-dialog-content>
+  <span>{{data.text}}</span>
+</div>
+<div mat-dialog-actions  [ngStyle]="{'border-color': data.color}" >
+  <button mat-button (click)="onNoClick()">Annuler</button>
+  <button mat-button 
+    [ngStyle]="{'background-color': data.color}"
+    [mat-dialog-close]="data.animal" cdkFocusInitial>Oui</button>
+</div>
