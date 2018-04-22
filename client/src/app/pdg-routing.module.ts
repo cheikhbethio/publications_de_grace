@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import {HomeComponent} from '../home/home.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { HomeComponent } from './home/home.component';
+import { OwnMatMaduleModule } from './own-mat-madule/own-mat-madule.module';
 
 const pdgRoutes: Routes = [
   {
@@ -36,7 +37,7 @@ const pdgRoutes: Routes = [
 
 @NgModule({
   imports: [
-    CommonModule,BrowserModule,
+    CommonModule,BrowserModule, OwnMatMaduleModule,
     RouterModule.forRoot(pdgRoutes,{
       preloadingStrategy: PreloadAllModules,
       // enableTracing: true, // <-- debugging purposes only

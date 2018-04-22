@@ -12,9 +12,10 @@ $dev_var_border_widht: 0px;
 		height: $pdg-header-height;
 		width: 100%;
 		position: fixed;
-    top: 0px;
-    background-color: green;
-		box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.74);
+		top: 0px;
+		background-color: $h1-but-color;
+    // background-color: green;
+		// box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.74);
 
 		span.logo-title {
 			color: white;

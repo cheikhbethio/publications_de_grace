@@ -13,7 +13,13 @@ export class UserResolverService implements Resolve<any>{
     return this.getUser(route.params.id);
   }
   getUser(userId){
-    return "toto";
+    return {
+      firstName: 'Kader', 
+      lastName: 'Kane', 
+      date: '19/02/2018',
+      email: 'kader.kader@pdg.fr',
+      status: 'ecrivain'
+    };
   }
 
 }

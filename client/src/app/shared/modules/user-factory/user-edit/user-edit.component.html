@@ -1,0 +1,51 @@
+<div class="user-edit-container" fxLayout fxLayoutAlign="start start">
+
+  <div class="picture-action-container" fxLayout="column" fxFlex="0 0 auto">
+    <div class="picture-panel" fxLayout fxLayoutAlign="center center">
+      <img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-1/p160x160/13529241_10210504989000626_368577499800934792_n.jpg?oh=07aeb4f52d43d764a34e35a91e8eb150&oe=5B4433AF" alt="">
+    </div>
+
+    <button mat-button class="btn-default btn-download">Télécharger une photo</button>
+  </div>
+
+  <div class="infos" fxLayout="row wrap" fxFlex="1 1 auto">
+    <form [formGroup]="signupForm" fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="start center">
+
+      <mat-form-field>
+        <input matInput placeholder="Prenom" formControlName="firstName" required>
+        <mat-error *ngIf="signupForm.controls.firstName.invalid">{{getErrorMessage('firstName')}}</mat-error>
+      </mat-form-field>
+
+      <!-- lastname -->
+      <mat-form-field>
+        <input matInput placeholder="Nom" formControlName="lastName" required>
+        <mat-error *ngIf="signupForm.controls.lastName.invalid">{{getErrorMessage('lastName')}}</mat-error>
+      </mat-form-field>
+      
+      <!-- email -->
+      <mat-form-field>
+        <input matInput placeholder="Email" formControlName="email" required>
+        <mat-error *ngIf="signupForm.controls.email.invalid">{{getErrorMessage('email')}}</mat-error>
+      </mat-form-field>
+
+      <!-- status -->
+      <mat-form-field>
+          <input matInput placeholder="Statut" formControlName="status">
+      </mat-form-field>
+      
+        <!-- date -->
+      <mat-form-field>
+        <input matInput placeholder="Date d'inscription" formControlName="date">
+      </mat-form-field>
+      
+    </form>
+
+    
+    <div class="actions" fxLayout="row wrap" fxFlex="1 1 auto" fxLayoutGap="10px" fxLayoutAlign="center end">
+      <button mat-button class="btn-danger" (click)="cancel()">Annuler</button>
+      <button mat-button class="btn-success" (click)="save()">Enregistrer</button>
+    </div>
+
+  </div>
+
+</div>

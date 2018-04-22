@@ -1,0 +1,96 @@
+@import '../../../../shared/scss/layout.scss';
+@import '../../../../shared/scss/variables.scss';
+
+.user-edit-container{
+	width: 100vw;
+	min-height: 500px;
+	height: auto;
+	background-color: white;
+	min-height: calc(100vh - #{$pdg-header-height} - #{$pdg-header-toolbar});
+	padding: 20px;
+	
+	.picture-action-container {
+		width: 200px;
+		height: auto;
+		.picture-panel {
+			height: 230px;
+			width: 100%;
+			// border: 1px solid #CCCCCC;
+			background-color: #FFFFFF;
+			img{
+				width: 100%;
+			}
+				.load-btn{
+					width: 100px;
+					height: 50px;
+					border: 1px solid $h1-but-color;
+				}
+		}
+		.btn-download{
+			font-weight: bold;
+			color: white;
+		}
+	}
+	
+	form{
+		width: 100%;
+		margin-left: 20px;
+
+		mat-form-field{
+			width: 40%;
+		}
+		.infos{
+	
+		}
+
+	}
+
+	// label {
+	// 	color: #6A7A8A;
+	// 	font-weight: bold;
+	// 	width: auto;
+	// 	padding-right: 20px;
+	// }
+
+	// .infos{
+	// 	height: auto;
+	// 	width: auto;
+	// 	padding-left: 20px;
+	// 	font-size: 20px;
+
+	// 	.info-group{
+	// 		@extend ._layout-flex-row-start-center;
+	// 		height: 50px;
+	// 		width: 50%;
+	// 		min-width: 300px;
+			
+	// 		.row-info{
+	// 			color: $h1-but-color;
+	// 		}
+	// 	}
+	// }
+	.resume{
+		padding-top: 20px;
+		width: 100%;
+		height: auto;
+		color: #6A7A8A;
+		.resume-text{
+			border-radius: 10px;
+			background-color: #eaf0ea;
+			padding: 20px;	
+		}
+		
+	}
+	.actions{
+		min-height: 50px;
+		width: 100%;
+		height: 150px;
+		button.mat-button{
+			font-size: 20px;
+			color: white;
+			margin-top: 10px;
+			height: 50px;
+			font-weight: bold;
+		}
+	}
+}

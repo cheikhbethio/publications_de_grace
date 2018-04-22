@@ -1,0 +1,28 @@
+<div class="account-container">
+	<div class="header-toolbar" fxLayout="row" fxLayoutAlign="start center">
+		<a routerLink="/account" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+			true}">
+			Accueil
+		</a>
+		<a routerLink="/account/profile" routerLinkActive="active">
+			Mon profile
+		</a>
+		<a routerLink="/account/myPoems" routerLinkActive="active">
+			Mes poemes
+		</a>
+		<a routerLink="/account/favoris" routerLinkActive="active">
+			Favoris
+		</a>
+		<a routerLink="/account/stats" routerLinkActive="active">
+			Statistiquess
+		</a>
+		<a routerLink="/account/users" routerLinkActive="active">
+			Utilisateurs
+		</a>
+	</div>
+
+	<div class="account-content">
+		<router-outlet></router-outlet>
+	</div>
+	
+</div>

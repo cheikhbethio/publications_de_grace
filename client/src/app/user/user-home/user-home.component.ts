@@ -36,7 +36,7 @@ export class UserHomeComponent implements OnInit {
     this.router.navigate(['./factory', '123'], {relativeTo: this.route});
   }
   openDialog(userId){
-    console.log('+++++open dialog+++',userId, this.dataDialog)
+    console.log("++++++++++++++++++++++++++++++")
     let dialogRef = this.dialog.open(DialogConfirmComponent, {
       panelClass: 'toto',
       width: '600px',

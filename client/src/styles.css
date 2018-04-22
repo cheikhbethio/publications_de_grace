@@ -14,3 +14,13 @@ p{
 .myClass mat-dialog-container {
   padding: 0px;
 }
+
+.btn-danger{
+	background-color: red;
+}
+.btn-success {
+	background-color: green;
+}
+.btn-default{
+	background-color: #d1d1d1;
+}

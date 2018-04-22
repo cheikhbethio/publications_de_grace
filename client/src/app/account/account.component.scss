@@ -1,0 +1,38 @@
+@import '../shared/scss/layout.scss';
+@import '../shared/scss/variables.scss';
+
+.account-container{
+	width: 100vw;
+
+	.header-toolbar{
+		width: 100vw;
+		height: $pdg-header-toolbar;
+		background-color: #039403;
+		position: fixed;
+		
+		a {
+			@extend ._layout-flex-row-center-center;
+			height: 100%;
+			// background-color: white;
+			width: auto;
+			padding: 0 20px;
+			text-decoration: none;
+			color: white;
+			
+			&:hover{
+				color: $h1-but-color;
+			}
+		}
+
+		.active{
+				color: $h1-but-color;
+				font-weight: 600;
+				background-color: white;
+		}
+	}
+
+	.account-content{
+		width: 100%;
+		padding-top: $pdg-header-toolbar;
+	}
+}

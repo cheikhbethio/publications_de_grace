@@ -1,25 +1,25 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { UserHomeComponent } from './user-home/user-home.component';
 import { UserViewComponent } from '../shared/modules/user-factory/user-view/user-view.component';
 import { UserResolverService } from '../shared/modules/user-factory/user-resolver.service';
+import { UserEditComponent } from '../shared/modules/user-factory/user-edit/user-edit.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: UserHomeComponent
+    component: UserViewComponent,
+    resolve: {user: UserResolverService}
   },
   {
-    path: 'factory/:id',
-    component: UserViewComponent,
+    path: 'update/:id',
+    component: UserEditComponent,
     resolve: {user: UserResolverService}
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [RouterModule],
-  providers: [UserResolverService]
+  providers: [UserResolverService]  
 })
-export class UserRoutingModule { }
+export class ProfileRoutingModule { }

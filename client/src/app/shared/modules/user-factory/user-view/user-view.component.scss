@@ -1,11 +1,12 @@
-@import '../../shared/scss/layout.scss';
-@import '../../shared/scss/variables.scss';
+@import '../../../../shared/scss/layout.scss';
+@import '../../../../shared/scss/variables.scss';
 
 .user-container{
 	width: 100vw;
-	height: 500px;
+	min-height: 500px;
+	height: auto;
 	background-color: white;
-	min-height: calc(100vh - 160px);
+	min-height: calc(100vh - #{$pdg-header-height} - #{$pdg-header-toolbar});
 	padding: 20px;
 	
 	.picture-action-container {
@@ -14,14 +15,25 @@
 		.picture-panel {
 			height: 230px;
 			width: 100%;
-			border: 1px solid #CCCCCC;
-			background-color: #FFFFFF;
-			.load-btn{
-				width: 100px;
-				height: 50px;
-				border: 1px solid $h1-but-color;
+			// border: 1px solid #CCCCCC;
+			// background-color: #FFFFFF;
+			img{
+				width: 100%;
 			}
+				// .load-btn{
+				// 	width: 100px;
+				// 	height: 50px;
+				// 	border: 1px solid $h1-but-color;
+				// }
 		}
+	}
+
+	label {
+		color: #6A7A8A;
+		font-weight: bold;
+		// width: 200px;
+		width: auto;
+		padding-right: 20px;
 	}
 
 	.infos{
@@ -36,24 +48,29 @@
 			height: 50px;
 			width: 50%;
 			min-width: 300px;
-			// background-color: #d9d7d7;
-			label {
-				color: #6A7A8A;
-				font-weight: bold;
-				// width: 200px;
-				width: auto;
-				padding-right: 20px;
-			}
+			
 			.row-info{
 				color: $h1-but-color;
 			}
 		}
 	}
+	.resume{
+		padding-top: 20px;
+		width: 100%;
+		height: auto;
+		color: #6A7A8A;
+		.resume-text{
+			border-radius: 10px;
+			background-color: #eaf0ea;
+			padding: 20px;	
+		}
+		
+	}
 	.actions{
 		min-height: 50px;
 		width: 100%;
-		height: auto;
-		padding-bottom: 20px;
+		height: 150px;
+		// padding-bottom: 20px;
 		// border: 1px solid #CCCCCC;
 		// padding-left: 20px;
 		// font-size: 20px;

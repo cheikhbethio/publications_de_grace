@@ -5,7 +5,8 @@ import { AccountRoutingModule } from './account-routing.module';
 import { AccountHomeComponent } from './account-home/account-home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { OwnMatMaduleModule } from '../own-mat-madule/own-mat-madule.module';
-
+import { AccountComponent } from './account.component';
+import { DialogConfirmComponent } from '../shared/composants/dialog-confirm/dialog-confirm.component';
 
 @NgModule({
   imports: [
@@ -16,8 +17,11 @@ import { OwnMatMaduleModule } from '../own-mat-madule/own-mat-madule.module';
   ],
   declarations: [
     AccountHomeComponent,
+    AccountComponent,
+    DialogConfirmComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-
+  entryComponents:[DialogConfirmComponent],  
+ 
 })
 export class AccountModule { }

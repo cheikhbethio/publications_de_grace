@@ -5,22 +5,20 @@ import { UserRoutingModule } from './user-routing.module';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { OwnMatMaduleModule } from '../own-mat-madule/own-mat-madule.module';
-import { UserFactoryComponent } from './user-factory/user-factory.component';
 import { DialogConfirmComponent } from '../shared/composants/dialog-confirm/dialog-confirm.component';
+import { UserFactoryModule } from '../shared/modules/user-factory/user-view.module';
 
 @NgModule({
   imports: [
     CommonModule,
     UserRoutingModule,
     FlexLayoutModule,
+    UserFactoryModule,
     OwnMatMaduleModule
   ],
   declarations: [
-    DialogConfirmComponent,
     UserHomeComponent,
-    UserFactoryComponent
-  ],
-  entryComponents:[DialogConfirmComponent],  
+  ]
 })
 export class UserModule {
 }
