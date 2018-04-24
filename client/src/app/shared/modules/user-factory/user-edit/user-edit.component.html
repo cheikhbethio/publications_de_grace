@@ -21,7 +21,7 @@
         <input matInput placeholder="Nom" formControlName="lastName" required>
         <mat-error *ngIf="signupForm.controls.lastName.invalid">{{getErrorMessage('lastName')}}</mat-error>
       </mat-form-field>
-      
+
       <!-- email -->
       <mat-form-field>
         <input matInput placeholder="Email" formControlName="email" required>
@@ -32,15 +32,20 @@
       <mat-form-field>
           <input matInput placeholder="Statut" formControlName="status">
       </mat-form-field>
-      
-        <!-- date -->
+
+      <!-- date -->
       <mat-form-field>
         <input matInput placeholder="Date d'inscription" formControlName="date">
       </mat-form-field>
-      
+
+      <!-- description -->
+      <mat-form-field class="description">
+        <textarea matInput placeholder="Description personnelle" formControlName="description"></textarea>
+      </mat-form-field>
+
     </form>
 
-    
+
     <div class="actions" fxLayout="row wrap" fxFlex="1 1 auto" fxLayoutGap="10px" fxLayoutAlign="center end">
       <button mat-button class="btn-danger" (click)="cancel()">Annuler</button>
       <button mat-button class="btn-success" (click)="save()">Enregistrer</button>

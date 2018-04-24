@@ -7,6 +7,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { OwnMatMaduleModule } from '../own-mat-madule/own-mat-madule.module';
 import { AccountComponent } from './account.component';
 import { DialogConfirmComponent } from '../shared/composants/dialog-confirm/dialog-confirm.component';
+import { DialogContactComponent } from '../shared/composants/dialog-contact/dialog-contact.component';
 
 @NgModule({
   imports: [
@@ -18,10 +19,13 @@ import { DialogConfirmComponent } from '../shared/composants/dialog-confirm/dial
   declarations: [
     AccountHomeComponent,
     AccountComponent,
-    DialogConfirmComponent
+    DialogConfirmComponent,
+    DialogContactComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  entryComponents:[DialogConfirmComponent],  
- 
+  entryComponents: [
+    DialogConfirmComponent,
+    DialogContactComponent
+  ]
 })
 export class AccountModule { }

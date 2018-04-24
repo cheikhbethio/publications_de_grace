@@ -72,14 +72,14 @@
             <mat-icon fontSet="fa" class="fa-heart"></mat-icon>
         </div>
     </div>
-    
+
     <div class="resume">
       <label>Résumé</label>
       <div class="resume-text">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, officia a blanditiis minus, libero rem quisquam tempore esse, possimus odio modi nostrum quaerat beatae! Voluptatum reiciendis maxime officia sint a animi culpa voluptate officiis sunt sed nemo quod, odit rem. Quas expedita ab amet quibusdam praesentium obcaecati qui beatae debitis veritatis dignissimos dolores maxime, corporis, itaque placeat sint nostrum fugiat aliquam commodi quod possimus hic quo perspiciatis. Laboriosam, excepturi aliquam ex similique quis deserunt labore? Sed laborum sunt quos ipsum porro, non quis dolorem nemo officia eligendi corporis dignissimos vitae, voluptatibus voluptas, atque quibusdam? Voluptate ratione alias fugiat recusandae nemo.
       </div>
     </div>
-    
+
     <div class="actions" [fxHide]="onUpDate" fxLayout="row nowrap" fxFlex="1 1 auto" fxLayoutGap="10px" fxLayoutAlign="center end">
       <button mat-button class="btn-danger">Supprimer</button>
       <button mat-button class="btn-success">Archiver</button>
@@ -87,11 +87,11 @@
     </div>
 
     <div class="actions" [fxShow]="onUpDate" fxLayout="row wrap" fxFlex="1 1 auto" fxLayoutGap="10px" fxLayoutAlign="center end">
-        <button mat-button class="btn-danger" (click)="openCloseDialog()">
+        <button mat-button class="btn-danger" (click)="openFenceDialog()">
           Clôturer mon compte</button>
         <button mat-button class="btn-success" (click)="goToUpdatePage()" matTooltip="Modifier mes infos">
           Modifications</button>
-        <button mat-button class="btn-default">
+        <button mat-button class="btn-default" (click)="openContactDialog()">
           Nous contacter</button>
         <button mat-button class="btn-success" matTooltip="Modification du mot de passe">
           Mot de passe</button>

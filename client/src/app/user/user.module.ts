@@ -5,7 +5,6 @@ import { UserRoutingModule } from './user-routing.module';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { OwnMatMaduleModule } from '../own-mat-madule/own-mat-madule.module';
-import { DialogConfirmComponent } from '../shared/composants/dialog-confirm/dialog-confirm.component';
 import { UserFactoryModule } from '../shared/modules/user-factory/user-view.module';
 
 @NgModule({

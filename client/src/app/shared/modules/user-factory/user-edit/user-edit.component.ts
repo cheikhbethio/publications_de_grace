@@ -18,7 +18,7 @@ export class UserEditComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private connectionService: ConnectionService,
     private router: Router
-    
+
   ) { }
 
   ngOnInit() {
@@ -30,13 +30,14 @@ export class UserEditComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       date: [{value: '', disabled: true}],
       status: [{value: '', disabled: true}],
+      description: ['']
     });
     this.signupForm.reset(this.currentUser)
     console.log('++++++++++++++', this.currentUser)
   }
   save(){
     //save and redirect
-    this.router.navigate(['../../'], {relativeTo: this.activatedRoute});    
+    this.router.navigate(['../../'], {relativeTo: this.activatedRoute});
   }
   cancel(){
     this.router.navigate(['../../'], {relativeTo: this.activatedRoute});
@@ -47,5 +48,6 @@ export class UserEditComponent implements OnInit {
   getPwdErrorMessage(inputName) {
     return this.connectionService.getPwdErrorMessage(inputName, this.signupForm);
   }
+
 
 }

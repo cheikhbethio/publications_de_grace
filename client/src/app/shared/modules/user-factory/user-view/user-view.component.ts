@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import 'rxjs/add/operator/map';
 import { DialogConfirmComponent } from '../../../composants/dialog-confirm/dialog-confirm.component';
 import { MatDialog } from '@angular/material';
+import { DialogContactComponent } from '../../../composants/dialog-contact/dialog-contact.component';
 
 @Component({
   selector: 'pdg-user-view',
@@ -18,6 +19,11 @@ export class UserViewComponent implements OnInit {
     color: 'red'
   };
 
+  contactDataDialog = {
+    title: `Contacter l'administrateur`,
+    color: 'green'
+  };
+
   constructor(
     private dialog: MatDialog,
     private activatedRoute: ActivatedRoute,
@@ -30,11 +36,32 @@ export class UserViewComponent implements OnInit {
     this.activatedRoute.data.map(data => data.user)
       .subscribe(res => res);
   }
+
+  openContactDialog() {
+    console.log('-------------', this.contactDataDialog);
+    let dialogRef = this.dialog.open(DialogContactComponent, {
+      panelClass: 'toto',
+      width: '600px',
+      height: '211px',
+      data: this.contactDataDialog
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        // send message and close form
+       return  console.log('The dialog was closed', result);
+      }
+      console.log('The dialog was closed by cancel');
+
+    });
+
+  }
   goToUpdatePage(){
     const id = '123'
     this.router.navigate(['./update', id], {relativeTo: this.activatedRoute});
   }
-  openCloseDialog(){
+
+  openFenceDialog(){
     let dialogRef = this.dialog.open(DialogConfirmComponent, {
       panelClass: 'toto',
       width: '600px',
