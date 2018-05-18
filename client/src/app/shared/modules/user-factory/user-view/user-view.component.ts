@@ -39,10 +39,10 @@ export class UserViewComponent implements OnInit {
 
   openContactDialog() {
     console.log('-------------', this.contactDataDialog);
-    let dialogRef = this.dialog.open(DialogContactComponent, {
+    const dialogRef = this.dialog.open(DialogContactComponent, {
       panelClass: 'toto',
       width: '600px',
-      height: '211px',
+      height: '400px',
       data: this.contactDataDialog
     });
 

@@ -20,32 +20,32 @@ const pdgRoutes: Routes = [
   },
   {
     path: 'home',
-		pathMatch: 'full',
+    pathMatch: 'full',
     component: HomeComponent
   },
   {
-		path: '',
-		redirectTo: '/home',
-		pathMatch: 'full',
-	},
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full',
+  },
   // {
   //   path: '**',
-	// 	redirectTo: '/home',
-	// 	pathMatch: 'full'
+  // 	redirectTo: '/home',
+  // 	pathMatch: 'full'
   // }
 ];
 
 @NgModule({
   imports: [
-    CommonModule,BrowserModule, OwnMatMaduleModule,
-    RouterModule.forRoot(pdgRoutes,{
+    CommonModule, BrowserModule, OwnMatMaduleModule,
+    RouterModule.forRoot(pdgRoutes, {
       preloadingStrategy: PreloadAllModules,
       // enableTracing: true, // <-- debugging purposes only
     })
   ],
-	exports: [
-		RouterModule
-	],
+  exports: [
+    RouterModule
+  ],
   declarations: []
 })
 export class PdgRoutingModule { }

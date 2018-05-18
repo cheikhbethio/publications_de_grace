@@ -16,7 +16,9 @@
         <span>Utilisateurs</span>
       </div>
 
-      <div class="account-chapter-card profil-chapter" fxLayout="column" fxFlex="200px" fxFlex.xs="170px" fxLayoutAlign="center center">
+      <div class="account-chapter-card profil-chapter"
+        (click)="goTo('/account/profile')"
+        fxLayout="column" fxFlex="200px" fxFlex.xs="170px" fxLayoutAlign="center center">
           <div class="icon" fxLayout fxLayoutAlign="center center">
             <mat-icon fontSet="fa" class="fa-cogs"></mat-icon>
           </div>

@@ -3,6 +3,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 @Component({
   moduleId: module.id,
+  // tslint:disable-next-line:component-selector
   selector: 'pdg-dialog-contact',
   templateUrl: 'dialog-contact.component.html',
   styleUrls: ['dialog-contact.component.scss']

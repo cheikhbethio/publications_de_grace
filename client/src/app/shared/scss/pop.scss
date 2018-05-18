@@ -9,10 +9,32 @@
     padding: 0;
   }
 
+  mat-form-field{
+    height: 90%;
+    width: 90%;
+    // .mat-input-wrapper .mat-form-field-wrapper{
+    //   height: 100%;
+    //   background-color: red;
+    // }
+    // .mat-input-wrapper{
+    //   height: 100%;
+    //   background-color: red;
+    // }
+  }
+
+  .mat-input-wrapper{
+    height: 100%;
+    background-color: red;
+  }
+  .mat-form-field-wrapper{
+    height: 100%;
+    background-color: red;
+  }
+
   .mat-dialog-content{
     margin: 0;
     padding: 0;
-    height: 100px;
+    // height: 100px;
   }
 
   .mat-dialog-title {
@@ -29,8 +51,15 @@
   }
 
   .mat-dialog-actions {
-      border-top: 1px solid;
+      // border-top: 1px solid;
+      // background-color: red;
+      height: 60px;
+      padding: 0px;
       @extend ._layout-flex-row-center-center;
+
+      &:last-child{
+        margin-bottom: 0px;
+      }
 
       .mat-button+.mat-button{
           // background-color: red;
